@@ -1,8 +1,8 @@
 ﻿using tyuiu.cources.programming.interfaces.Sprint4;
 namespace Tyuiu.MamatkulovFO.Sprint4.Task0.V23.Lib
 {
-        public class DataService : ISprint4Task0V23
-        {
+    public class DataService : ISprint4Task0V23
+    {
         public int GetMultOddArrEl(int[] array)
         {
             if (array == null)

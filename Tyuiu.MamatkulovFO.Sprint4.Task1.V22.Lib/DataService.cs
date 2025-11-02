@@ -2,7 +2,7 @@
 namespace Tyuiu.MamatkulovFO.Sprint4.Task1.V22.Lib
 {
 
-    public class DataService : ISprint4Task0V22
+    public class DataService : ISprint4Task1V22
     {
         /// <summary>
         /// Вычисляет произведение всех нечётных элементов в массиве.

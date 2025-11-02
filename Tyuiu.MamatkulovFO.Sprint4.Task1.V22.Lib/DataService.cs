@@ -4,33 +4,32 @@ namespace Tyuiu.MamatkulovFO.Sprint4.Task1.V22.Lib
 
     public class DataService : ISprint4Task1V22
     {
-            public int CalculateOddProduct(int[] arr)
-            {
-                int p = 1;
-                bool found = false;
+        public int CalculateOddProduct(int[] array)
+        {
+            // Выбираем уникальные нечётные числа
+            var odds = array.Where(x => x % 2 == 1).Distinct().ToArray();
 
-                foreach (int x in arr)
-                {
-                    if (x % 2 == 1) // Если число нечётное
-                    {
-                        p *= x;
-                        found = true;
-                    }
-                }
+            // Если нет нечётных — результат 0
+            if (odds.Length == 0) return 0;
 
-                return found ? p : 0; // Если нечётных нет — возвращаем 0
-            }
+            // Считаем произведение
+            int result = 1;
+            foreach (int num in odds)
+                result *= num;
 
-            // Второй метод (заглушка) — если система требует реализации
-            public int CalculateOddProduct(int[] array, bool v)
-            {
-                // По условию задачи он не нужен — просто возвращаем основной расчёт
-                return CalculateOddProduct(array);
-            }
-      
-    
-       
-        
+            return result; // Для {8,5,4,4,3,9,...} → 5*3*9 = 135
+        }
+
+        /// <summary>
+        /// Перегрузка метода (требуется интерфейсом, но не используется).
+        /// Просто вызывает основной метод.
+        /// </summary>
+        public int CalculateOddProduct(int[] array, bool v)
+        {
+            return CalculateOddProduct(array);
+        }
     }
 }
+    
+
 

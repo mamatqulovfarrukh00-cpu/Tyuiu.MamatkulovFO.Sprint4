@@ -2,6 +2,9 @@
 using Tyuiu.MamatkulovFO.Sprint4.Task1.V22.Lib;
 namespace Tyuiu.MamatkulovFO.Sprint4.Task1.V22.Test
 {
+
+    
+
     [TestFixture]
     public class DataServiceTest
     {
@@ -21,7 +24,4 @@ namespace Tyuiu.MamatkulovFO.Sprint4.Task1.V22.Test
             Assert.AreEqual(135, service.CalculateOddProduct(array, true));
         }
     }
-
-
-   
 }

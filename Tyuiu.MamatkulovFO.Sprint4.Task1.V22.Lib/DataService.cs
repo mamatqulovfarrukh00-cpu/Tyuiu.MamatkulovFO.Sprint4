@@ -4,26 +4,14 @@ namespace Tyuiu.MamatkulovFO.Sprint4.Task1.V22.Lib
 
     public class DataService : ISprint4Task1V22
     {
-        public int CalculateOddProduct(int[] array)
+        public int CalculateOddProduct(int[] arr)
         {
-            int product = 1;
-            bool hasOdd = false;
-
-            foreach (int num in array)
-            {
-                if (num % 2 != 0) // Если число нечётное
-                {
-                    product *= num;
-                    hasOdd = true;
-                }
-            }
-
-            // Если нечётных чисел нет, возвращаем 0
-            return hasOdd ? product : 0;
+            int p = 1;
+            bool found = false;
+            foreach (int x in arr)
+                if (x % 2 == 1) { p *= x; found = true; }
+            return found ? p : 0;
         }
 
-
     }
-    
 }
-

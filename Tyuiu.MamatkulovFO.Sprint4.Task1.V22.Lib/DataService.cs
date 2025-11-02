@@ -4,15 +4,7 @@ namespace Tyuiu.MamatkulovFO.Sprint4.Task1.V22.Lib
 
     public class DataService : ISprint4Task1V22
     {
-        /// <summary>
-        /// Вычисляет произведение всех нечётных элементов в массиве.
-        /// Если нечётных элементов нет — возвращает 0.
-        /// Если массив null — выбрасывает исключение.
-        /// </summary>
-        /// <param name="array">Массив целых чисел</param>
-        /// <returns>Произведение нечётных чисел или 0</returns>
-
-        public int GetSumOddArrEl(int[] array)
+        public int GetMultOddArrEl(int[] array)
         {
             if (array == null)
                 throw new ArgumentNullException(nameof(array));
@@ -31,6 +23,8 @@ namespace Tyuiu.MamatkulovFO.Sprint4.Task1.V22.Lib
 
             return hasOdd ? product : 0;
         }
+
+       
     }
     
 }

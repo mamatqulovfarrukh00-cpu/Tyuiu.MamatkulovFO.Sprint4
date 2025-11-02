@@ -8,7 +8,7 @@ namespace Tyuiu.MamatkulovFO.Sprint4.Task1.V22.Test
         public void GetMultOddArrEl_Variant23_Returns39690()
         {
             // Подготовка
-           
+            var dataService = new DataService();
             int[] inputArray = { 9, 3, 7, 1, 5, 3, 2, 1, 7 }; // из вашего задания
             int expected = 39690; // 9*3*7*1*5*3*1*7
 

@@ -1,33 +1,23 @@
 ﻿using Tyuiu.MamatkulovFO.Sprint4.Task1.V22.Lib;
 namespace Tyuiu.MamatkulovFO.Sprint4.Task1.V22
 {
-    
-    
-        class Program
+    class Program
+    {
+        static void Main()
         {
-            static void Main()
-            {
-                Console.WriteLine("Демонстрация работы DataService:");
-                Console.WriteLine("================================");
+            // Создаём экземпляр сервиса
+            var service = new DataService();
 
-                var service = new DataService();
-                int[] array = { 9, 3, 7, 1, 5, 3, 2, 1, 7 };
+            // Заданный массив
+            int[] numbers = { 8, 5, 4, 4, 3, 9, 9, 9, 3, 4, 4, 9 };
 
-                try
-                {
-                    int result = service.GetMultOddArrEl(array);
-                Console.WriteLine($"Массив: [{string.Join(", ", array)}]");
-                    Console.WriteLine($"Произведение нечётных элементов: {result}");
-                    Console.WriteLine("\n✅ Ожидаемый результат: 39690");
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine($"❌ Ошибка: {ex.Message}");
-                }
+            // Вычисляем произведение нечётных
+            int result = service.CalculateOddProduct(numbers);
 
-                Console.WriteLine("\nНажмите любую клавишу для выхода...");
-                Console.ReadKey();
-            }
+            // Выводим результат
+            Console.WriteLine($"Произведение нечётных элементов: {result}");
+            Console.ReadKey(); // Ожидание нажатия клавиши
         }
-    
+    }
+
 }

@@ -1,22 +1,40 @@
 ﻿using Tyuiu.MamatkulovFO.Sprint4.Task1.V22.Lib;
 namespace Tyuiu.MamatkulovFO.Sprint4.Task1.V22.Test
 {
-    [TestClass]
+   
     public class DataServiceTest
     {
-        [TestMethod]
-        public void GetMultOddArrEl_Variant23_Returns39690()
+        private DataService _service;
+
+        [SetUp]
+        public void Setup()
         {
-            // Подготовка
-            var dataService = new DataService();
-            int[] inputArray = { 9, 3, 7, 1, 5, 3, 2, 1, 7 }; // из вашего задания
-            int expected = 39690; // 9*3*7*1*5*3*1*7
+            _service = new DataService();
+        }
 
-            // Действие
-            int actual = service.GetMultOddArrEl(inputArray);
+        [Test]
+        public void Test_OddProduct_WithGivenArray()
+        {
+            // Дано: массив из задания
+            int[] array = { 8, 5, 4, 4, 3, 9, 9, 9, 3, 4, 4, 9 };
 
-            // Проверка
-            Assert.AreEqual(expected, actual, "Результат не совпадает с ожидаемым.");
+            // Когда: вычисляем произведение нечётных
+            int result = _service.CalculateOddProduct(array);
+
+            // Тогда: результат должен быть равен 5 * 3 * 9 * 9 * 9 * 3 * 9 = 295245
+            Assert.AreEqual(295245, result);
+        }
+
+        [Test]
+        public void Test_OddProduct_WithNoOdds_ReturnsZero()
+        {
+            int[] array = { 2, 4, 6, 8 };
+            int result = _service.CalculateOddProduct(array);
+            Assert.AreEqual(0, result);
+        }
+
+        private class SetUpAttribute : Attribute
+        {
         }
     }
 }

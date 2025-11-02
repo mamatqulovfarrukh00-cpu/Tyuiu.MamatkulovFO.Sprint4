@@ -16,7 +16,7 @@ namespace Tyuiu.MamatkulovFO.Sprint4.Task1.V22
                 try
                 {
                     int result = service.GetMultOddArrEl(array);
-                    Console.WriteLine($"Массив: [{string.Join(", ", array)}]");
+                Console.WriteLine($"Массив: [{string.Join(", ", array)}]");
                     Console.WriteLine($"Произведение нечётных элементов: {result}");
                     Console.WriteLine("\n✅ Ожидаемый результат: 39690");
                 }

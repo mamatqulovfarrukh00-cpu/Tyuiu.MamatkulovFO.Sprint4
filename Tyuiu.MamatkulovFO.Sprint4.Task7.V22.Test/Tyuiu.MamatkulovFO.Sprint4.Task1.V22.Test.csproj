@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
@@ -23,7 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Tyuiu.MamatkulovFO.Sprint4.Task7.V22.Lib\Tyuiu.MamatkulovFO.Sprint4.Task7.V22.Lib.csproj" />
+    <ProjectReference Include="..\Tyuiu.MamatkulovFO.Sprint4.Task1.V22.Lib\Tyuiu.MamatkulovFO.Sprint4.Task1.V22.Lib.csproj" />
   </ItemGroup>
 
   <ItemGroup>
